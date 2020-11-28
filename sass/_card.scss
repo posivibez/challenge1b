@@ -1,0 +1,84 @@
+.card {
+    // background-image: linear-gradient(transparent 0%, transparent 40%, rgba(white, 1) 40%), url(/images/bg-pattern-card.svg);
+    background-image: url(/images/bg-pattern-card.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    display: block;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 1rem 2rem 5rem rgba(black, 0.2);
+    z-index: 2;
+
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-gap: 3rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 300px;
+
+    }
+ 
+
+
+    &__profile {
+        border-radius: 50%;
+        margin-top: 25%;
+        justify-self: center;
+        border: 5px solid white;
+
+    }
+
+    &__info {
+
+        justify-self: center;
+        text-align: center;
+
+
+        &--name {
+
+        }
+    
+        &--age {
+            color: $color-neutralgrey;
+            font-weight: 400;
+        }  
+
+        &--location {
+            color: $color-neutralgrey;
+            font-weight: 400;
+            font-size: 1.4rem;
+        }
+    }
+
+     
+
+    &__details {
+        
+        border-top: 1px solid rgba($color-neutralgrey, 0.3);
+        display: grid;
+        grid-template-columns: repeat(3, .25fr);
+        justify-content: center;
+        grid-gap: 4rem;
+
+
+
+
+
+        &--item {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        &--number {
+            font-size: 2rem;
+        }
+
+        &--name {
+            font-size: 1.5rem;
+            color: $color-neutralgrey;
+            font-weight: 400;
+        }
+
+    }
+}
